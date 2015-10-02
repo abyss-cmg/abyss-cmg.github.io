@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hexo-setup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/02/hexo-setup/" class="article-date">
+  <time datetime="2015-10-02T03:36:00.000Z" itemprop="datePublished">2015-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/02/hexo-setup/">Markdown之旅（二）——静态博客框架的搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Hexo的安装与简单使用">Hexo的安装与简单使用</h3><blockquote>
+<p>前言：上一篇<a href="/2015/10/01/sublime-text-setup" title="Markdown之旅（一）——编辑器的准备">Markdown之旅（一）——编辑器的准备</a>折腾完ST3编辑器，现在要开始记录Hexo的折腾过程。</p>
+</blockquote>
+<hr>
+<h4 id="Node-js的安装"><em>Node.js的安装</em></h4><p>直接在<a href="https://nodejs.org/en/" title="直达nodej官网" target="_blank" rel="external">官网下载</a>，各种下一步然后就安装完了。</p>
+<p>如下图，将npm添加到系统环境变量Path中，<code>;H:\Program Files\nodejs\node_modules\npm</code> 注意修改路径即可。</p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-1.jpg" alt="Nodejs 环境变量"></p>
+<hr>
+<h4 id="Git的安装"><em>Git的安装</em></h4><p>与Nodejs安装一样，没什么可以说的，也是<a href="https://git-scm.com/downloads" title="直达git官网下载页面" target="_blank" rel="external">官网下载</a>，各种下一步。</p>
+<hr>
+<h4 id="Hexo的安装"><em>Hexo的安装</em></h4><p><code>你的静态博客文件夹 鼠标右键 &gt; Git Bash</code>，使用命令安装 <code>$ npm install -g hexo-cli</code> 即可，很简单吧~</p>
+<hr>
+<h4 id="建站"><em>建站</em></h4><p>如果你按照我说的进行安装，那你的git bash路径应该就是你的静态博客路径了，如果不是，请自行使用 <code>cd</code> 命令进入博客目录，那么接下来就是初始化了，使用下面2命令即可，Hexo将会在当前目录新建所需的文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>第二个命令可能需要花费一定的时间，耐心等待安装，完成后博客文件夹会多出一些文件/文件夹。</p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-2.jpg" alt="Hexo 博客目录"></p>
+<p>上图所示的就是我的Hexo静态博客目录，使用 <code>$ hexo server</code> 启动服务器，即可使用浏览器访问 <code>localhost:4000</code> 查看效果了，如果4000端口被占用了，可以使用 <code>-p</code> 或 <code>--port</code> 改变，如 <code>$ hexo server -p 12345</code></p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-3.jpg" alt="Hexo 使用12345端口"></p>
+<p>刚开始使用，还没有来得及对主题什么的进行调整，使用的是默认的主题。</p>
+<hr>
+<h4 id="写作"><em>写作</em></h4><p>折腾了那么久，终于可以开始写作了。</p>
+<p><code>$ hexo new [layout] &lt;title&gt;</code></p>
+<p>您可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-4.jpg" alt="Hexo 创建新文章"></p>
+<p>如上图所示就为该文章的创建命令，至此，可以开始写作之旅了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/02/hexo-setup/" data-id="cif95kwhp000138tkb7cwm83k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown之旅/">Markdown之旅</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-sublime-text-setup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/01/sublime-text-setup/" class="article-date">
+  <time datetime="2015-10-01T13:39:53.000Z" itemprop="datePublished">2015-10-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/01/sublime-text-setup/">Markdown之旅（一）——编辑器的准备</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Sublime_Text_3的安装与简单配置（插件）">Sublime Text 3的安装与简单配置（插件）</h3><blockquote>
+<p>前言：由于公司里装的是Sublime Text 3（后文简称ST3），有强迫症的我，只好把家里升级为ST3了，也顺便将安装过程纳入Markdown之旅的第一篇博文吧。</p>
+</blockquote>
+<hr>
+<h5 id="下载、安装与激活"><em>下载、安装与激活</em></h5><p>首先当然是下载ST3的安装包拉，还是<a href="http://www.sublimetext.com/3" target="_blank" rel="external">官方下载</a>吧（就是这个feel），安装过程就不说了，你懂的。</p>
+<p>我下载的时候最新版本是3083版，这里顺便提供一下激活码，其实不激活也行，只是在使用的过程中时不时弹出一个弹窗而已（神马！时不时弹出来，谁受得了啊，果断激活吧，少年）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">Andrew Weber</span><br><span class="line">Single User License</span><br><span class="line">EA7E-<span class="number">855605</span></span><br><span class="line"><span class="number">813</span>A03DD <span class="number">5E4</span>AD9E6 <span class="number">6</span>C0EEB94 BC99798F</span><br><span class="line"><span class="number">942194</span>A6 <span class="number">02396E98</span> E62C9979 <span class="number">4</span>BB979FE</span><br><span class="line"><span class="number">91424</span>C9D A45400BF F6747D88 <span class="number">2F</span>B88078</span><br><span class="line"><span class="number">90F</span>5CC94 <span class="number">1</span>CDC92DC <span class="number">8457107</span>A F151657B</span><br><span class="line"><span class="number">1</span>D22E383 A997F016 <span class="number">42397640</span> <span class="number">33F</span>41CFC</span><br><span class="line">E1D0AE85 A0BBD039 <span class="number">0E9</span>C8D55 E1B89D5D</span><br><span class="line"><span class="number">5</span>CDB7036 E56DE1C0 EFCC0840 <span class="number">650</span>CD3A6</span><br><span class="line">B98FC99C <span class="number">8F</span>AC73EE D2B95564 DF450523</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure>
+<p>打开ST3，依次点击<code>Help &gt; Enter License</code>，将上面的代码粘贴进去，点击<code>Use License</code>，成功之后会出现“Thanks for purchasing!”弹窗。</p>
+<p><img src="2015-10-01-sublime-text-setup/sublime-text-setup-1.jpg" alt="ST3 激活"></p>
+<p>至此，万恶的提醒弹窗就消失了。</p>
+<hr>
+<h5 id="插件安装"><em>插件安装</em></h5><p>先安装Package control，使用<code>strl+` </code>或<code>View &gt; Show Console</code>打开ST的控制台，将下面的代码粘贴进去，回车运行，等一段时间安装成功后就可以在<code>Preferences</code>中看到<code>Package Control</code>了。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = <span class="string">'2915d1851351e5ee549c20394736b442'</span> + <span class="string">'8bc59f460fa1548d1514676163dafc88'</span>; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); <span class="keyword">by</span> = urllib.request.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.<span class="built_in">replace</span>(<span class="string">' '</span>, <span class="string">'%20'</span>)).<span class="built_in">read</span>(); dh = hashlib.sha256(<span class="keyword">by</span>).hexdigest(); print(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> <span class="built_in">open</span>(os.path.join( ipp, pf), <span class="string">'wb'</span> ).<span class="built_in">write</span>(<span class="keyword">by</span>)</span><br></pre></td></tr></table></figure>
+<p>如果不行上述方法安装失败，还可以下载<a href="https://packagecontrol.io/installation#st3" target="_blank" rel="external">Package control 离线包</a>进行安装。在Manual下找到下面一行字，点击<code>Package Control.sublime-package</code>进行下载。</p>
+<blockquote>
+<p>3.Download <code>Package Control.sublime-package</code> and copy it into the <code>Installed Packages/</code> directory</p>
+</blockquote>
+<p>下载完后如果不知道<code>Installed Packages/</code>在哪，可以按以下方式进入，<code>Preferences &gt; Browser Packages...</code>，在打开的文件夹中，返回上一层<code>Sublime Text 3</code>，即可看到<code>Installed Packages</code>，进入后将下载的<strong><code>Package Control.sublime-package</code></strong>文件粘贴进去，重启ST3就会自动安装<code>Package control</code>。</p>
+<p>有了Package Control就可以开始下载自己想要的插件了，网上关于ST系列的插件推荐有很多，我这里只记录我安装的，由此ST3只作为Markdown写作的编辑器，因此重装后我只安装了部分插件，下图为我安装的插件列表。</p>
+<p><img src="2015-10-01-sublime-text-setup/sublime-text-setup-2.jpg" alt="ST3 插件列表"></p>
+<ol>
+<li>Alignment 等号对齐，默认快捷键为<code>ctrl+alt+a</code><br>有强迫症的我，怎么能不用这种等号对齐的神器呢！</li>
+<li>Bracket Highlighter 高亮显示匹配的括号、引号和标签。<br>在web开发的过程中，多层标签嵌套时有没有傻傻分不清哪个是哪个，这个插件可以让你快速理清各标签的嵌套关系。</li>
+<li>Git 你懂的，这个不说了。</li>
+<li>JsFormat 顾名思义，js的代码格式化插件，默认快捷键为<code>ctrl+alt+f</code>。</li>
+<li>Markdown Editing 主要用来Markdown语法高亮和替换主题。</li>
+<li>Pretty JSON json字符串的格式化，可以将压缩的json字符串格式化展开（快捷键<code>ctrl+alt+j</code>），也可以将展开的json字符串压缩（快捷键<code>ctrl+alt+m</code>）。</li>
+<li><p>Side Bar 侧边栏增强工具，ST原有的侧边栏功能太少了，这个可以扩展功能。<br>这个其实是SideBarEnhancements，不知道为什么安装完名字变成这个了。<br>安装完后可以添加快捷键，以便于快速将当前的文件用浏览器打开。<br>进入<code>Preferences &gt; Packages Settings &gt; Side Bar &gt; Key Bindings - User</code>，将下面代码粘贴进去。由于我主要使用chrome和firefox进行开发，因此此处只有2个配置，请自行修改浏览器的安装路径。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"ctrl+shift+c"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"copy_path"</span> </span>&#125;,</span><br><span class="line">    //firefox</span><br><span class="line">    &#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"f1"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"side_bar_files_open_with"</span></span>,</span><br><span class="line">             "<span class="attribute">args</span>": <span class="value">&#123;</span><br><span class="line">                "<span class="attribute">paths</span>": <span class="value">[]</span>,</span><br><span class="line">                "<span class="attribute">application</span>": <span class="value"><span class="string">"D:\\Program Files\\Mozilla Firefox\\firefox.exe"</span></span>,</span><br><span class="line">                "<span class="attribute">extensions</span>":<span class="value"><span class="string">".*"</span> //匹配任何文件类型</span><br><span class="line">            </span>&#125;</span><br><span class="line">    </span>&#125;,</span><br><span class="line">    //chrome</span><br><span class="line">    &#123; "<span class="attribute">keys</span>": <span class="value">[<span class="string">"f2"</span>]</span>, "<span class="attribute">command</span>": <span class="value"><span class="string">"side_bar_files_open_with"</span></span>,</span><br><span class="line">            "<span class="attribute">args</span>": <span class="value">&#123;</span><br><span class="line">                "<span class="attribute">paths</span>": <span class="value">[]</span>,</span><br><span class="line">                "<span class="attribute">application</span>": <span class="value"><span class="string">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span></span>,</span><br><span class="line">                "<span class="attribute">extensions</span>":<span class="value"><span class="string">".*"</span></span><br><span class="line">            </span>&#125;</span><br><span class="line">     </span>&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Table Editor 据说Markdown的表格书写体验不好，有人专门开发了这个插件，还没体验过。</p>
+</li>
+<li>Trailing Spaces 显示行末尾空格，适合强迫症删掉行尾空格。<br>当然也可以在配置中将<code>trim_automatic_white_space</code>设置为true让ST3自动删除行尾空格。</li>
+<li>CSScomb css语句顺序调整，也可以自定义排序规则。<br>对新手学习css有巨大帮助，可以让你知道规范的css语句顺序是怎样的，有助于思考如何布局一个页面</li>
+<li>ColorPicker 调色盘，谁用谁知道。</li>
+<li>OmniMarkupPreviewer 在实时浏览器中预览，谁用谁知道。<br>妈妈再也不用担心写Markdown时代码预览的问题了。</li>
+</ol>
+<p>ST3还有许多有用的插件，大家可自行下载使用，只是要注意插件之间的快捷键冲突问题。</p>
+<p>遇到快捷键冲突记得在<code>Key Bindings - User</code>中修改。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/01/sublime-text-setup/" data-id="cif95kwi6000838tkep09kwb6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown之旅/">Markdown之旅</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown之旅/">Markdown之旅</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown之旅/" style="font-size: 20px;">Markdown之旅</a> <a href="/tags/Sublime-Text/" style="font-size: 10px;">Sublime Text</a> <a href="/tags/软件/" style="font-size: 20px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/10/02/hexo-setup/">Markdown之旅（二）——静态博客框架的搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/01/sublime-text-setup/">Markdown之旅（一）——编辑器的准备</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 陈敏光<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

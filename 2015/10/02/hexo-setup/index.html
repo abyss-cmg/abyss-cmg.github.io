@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Markdown之旅（二）——静态博客框架的搭建 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo的安装与简单使用
+前言：上一篇Markdown之旅（一）——编辑器的准备折腾完ST3编辑器，现在要开始记录Hexo的折腾过程。
+
+
+Node.js的安装直接在官网下载，各种下一步然后就安装完了。
+如下图，将npm添加到系统环境变量Path中，;H:\Program Files\nodejs\node_modules\npm 注意修改路径即可。
+
+
+Git的安装与Nodejs安装一样，没什么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown之旅（二）——静态博客框架的搭建">
+<meta property="og:url" content="http://yoursite.com/2015/10/02/hexo-setup/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo的安装与简单使用
+前言：上一篇Markdown之旅（一）——编辑器的准备折腾完ST3编辑器，现在要开始记录Hexo的折腾过程。
+
+
+Node.js的安装直接在官网下载，各种下一步然后就安装完了。
+如下图，将npm添加到系统环境变量Path中，;H:\Program Files\nodejs\node_modules\npm 注意修改路径即可。
+
+
+Git的安装与Nodejs安装一样，没什么">
+<meta property="og:image" content="http://yoursite.com/2015-10-02-hexo-setup/hexo-setup-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2015-10-02-hexo-setup/hexo-setup-2.jpg">
+<meta property="og:image" content="http://yoursite.com/2015-10-02-hexo-setup/hexo-setup-3.jpg">
+<meta property="og:image" content="http://yoursite.com/2015-10-02-hexo-setup/hexo-setup-4.jpg">
+<meta property="og:updated_time" content="2015-10-02T04:59:38.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown之旅（二）——静态博客框架的搭建">
+<meta name="twitter:description" content="Hexo的安装与简单使用
+前言：上一篇Markdown之旅（一）——编辑器的准备折腾完ST3编辑器，现在要开始记录Hexo的折腾过程。
+
+
+Node.js的安装直接在官网下载，各种下一步然后就安装完了。
+如下图，将npm添加到系统环境变量Path中，;H:\Program Files\nodejs\node_modules\npm 注意修改路径即可。
+
+
+Git的安装与Nodejs安装一样，没什么">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hexo-setup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/02/hexo-setup/" class="article-date">
+  <time datetime="2015-10-02T03:36:00.000Z" itemprop="datePublished">2015-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Markdown之旅（二）——静态博客框架的搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Hexo的安装与简单使用">Hexo的安装与简单使用</h3><blockquote>
+<p>前言：上一篇<a href="/2015/10/01/sublime-text-setup" title="Markdown之旅（一）——编辑器的准备">Markdown之旅（一）——编辑器的准备</a>折腾完ST3编辑器，现在要开始记录Hexo的折腾过程。</p>
+</blockquote>
+<hr>
+<h4 id="Node-js的安装"><em>Node.js的安装</em></h4><p>直接在<a href="https://nodejs.org/en/" title="直达nodej官网" target="_blank" rel="external">官网下载</a>，各种下一步然后就安装完了。</p>
+<p>如下图，将npm添加到系统环境变量Path中，<code>;H:\Program Files\nodejs\node_modules\npm</code> 注意修改路径即可。</p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-1.jpg" alt="Nodejs 环境变量"></p>
+<hr>
+<h4 id="Git的安装"><em>Git的安装</em></h4><p>与Nodejs安装一样，没什么可以说的，也是<a href="https://git-scm.com/downloads" title="直达git官网下载页面" target="_blank" rel="external">官网下载</a>，各种下一步。</p>
+<hr>
+<h4 id="Hexo的安装"><em>Hexo的安装</em></h4><p><code>你的静态博客文件夹 鼠标右键 &gt; Git Bash</code>，使用命令安装 <code>$ npm install -g hexo-cli</code> 即可，很简单吧~</p>
+<hr>
+<h4 id="建站"><em>建站</em></h4><p>如果你按照我说的进行安装，那你的git bash路径应该就是你的静态博客路径了，如果不是，请自行使用 <code>cd</code> 命令进入博客目录，那么接下来就是初始化了，使用下面2命令即可，Hexo将会在当前目录新建所需的文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>第二个命令可能需要花费一定的时间，耐心等待安装，完成后博客文件夹会多出一些文件/文件夹。</p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-2.jpg" alt="Hexo 博客目录"></p>
+<p>上图所示的就是我的Hexo静态博客目录，使用 <code>$ hexo server</code> 启动服务器，即可使用浏览器访问 <code>localhost:4000</code> 查看效果了，如果4000端口被占用了，可以使用 <code>-p</code> 或 <code>--port</code> 改变，如 <code>$ hexo server -p 12345</code></p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-3.jpg" alt="Hexo 使用12345端口"></p>
+<p>刚开始使用，还没有来得及对主题什么的进行调整，使用的是默认的主题。</p>
+<hr>
+<h4 id="写作"><em>写作</em></h4><p>折腾了那么久，终于可以开始写作了。</p>
+<p><code>$ hexo new [layout] &lt;title&gt;</code></p>
+<p>您可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
+<p><img src="2015-10-02-hexo-setup/hexo-setup-4.jpg" alt="Hexo 创建新文章"></p>
+<p>如上图所示就为该文章的创建命令，至此，可以开始写作之旅了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/02/hexo-setup/" data-id="cif95kwhp000138tkb7cwm83k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown之旅/">Markdown之旅</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件/">软件</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/10/01/sublime-text-setup/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Markdown之旅（一）——编辑器的准备</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown之旅/">Markdown之旅</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sublime-Text/">Sublime Text</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown之旅/" style="font-size: 20px;">Markdown之旅</a> <a href="/tags/Sublime-Text/" style="font-size: 10px;">Sublime Text</a> <a href="/tags/软件/" style="font-size: 20px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/10/02/hexo-setup/">Markdown之旅（二）——静态博客框架的搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/01/sublime-text-setup/">Markdown之旅（一）——编辑器的准备</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 陈敏光<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
